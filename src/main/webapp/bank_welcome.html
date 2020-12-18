@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>武纺网上银行</title>
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.5.0.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.3.1.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/login.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <style>
+        .fakeimg1 {
+            height: 200px;
+            background: #aaa;
+        }
+        .fakeimg2{
+            margin: 50px auto;
+            height: 200px;
+            background: #aaa;
+        }
+        .form-horizontal{
+            margin: 55px auto;
+        }
+        .error {
+            font-size: 12px;
+            color: red;
+            display: block;
+            height: 16px;
+            line-height: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <h1>网上银行ATM系统</h1>
+</div>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ATM Online</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+<!--                <li><a href="bank_login.html">登录</a></li>-->
+<!--                <li><a href="#">页面 3</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>关于本行</h2>
+            <div class="fakeimg1"><img src="/images/WTU.png" alt="图片加载失败"></div>
+            <p>武汉纺织大学网上银行</p>
+            <h3>链接</h3>
+            <p>友效网上银行链接</p>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">湖北工业大学网上银行</a></li>
+                <li class="active"><a href="#">中南民族大学网上银行</a></li>
+            </ul>
+            <hr class="hidden-sm hidden-md hidden-lg">
+        </div>
+        <div class="col-sm-4">
+            <h2>“乾元-优享”理财项目</h2>
+            <h5>理财非存款，产品有风险，投资需谨慎</h5>
+            <div class="fakeimg2"><img src="/images/advertisement.png" alt="图片加载失败"></div>
+<!--            <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>-->
+            <br>
+<!--            <h2>标题</h2>-->
+<!--            <h5>副标题</h5>-->
+<!--            <div class="fakeimg">图像</div>-->
+<!--            <p>一些文本..</p>-->
+<!--            <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>-->
+        </div>
+        <div class="col-sm-4">
+            <h2>请登录</h2>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputID" class="col-sm-2 control-label">卡&nbsp;号</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputID" name="inputID" placeholder="卡&nbsp;号"><br>
+                        <span class="error" id="IDError"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassWord" class="col-sm-2 control-label">密&nbsp;码</label>
+                    <div class="col-sm-6">
+                        <input type="password" class="form-control" id="inputPassWord" name="inputPassWord" placeholder="密&nbsp;码"><br>
+                        <span class="error" id="passWordError"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-default" onclick="jqAjaxCheckLogin()">登&nbsp;录</button>
+<!--                        <a href="/updatePassWord">忘记密码</a><br>-->
+                        <span class="error" id="checkError"></span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <p>@WTU.EDU.CN</p>
+</div>
+</body>
+</html>

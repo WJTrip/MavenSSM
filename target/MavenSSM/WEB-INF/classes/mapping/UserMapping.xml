@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.IUserDAO">
+
+    <update id="lockUser" parameterType="User">
+        update t_user
+        set state = 0
+        where ID=#{ID} ;
+    </update>
+
+    <update id="deposit" parameterType="int">
+        update t_user
+        set balance = balance + #{money}
+        where ID=#{ID} ;
+    </update>
+
+    <update id="withDraw" parameterType="int">
+        update t_user
+        set balance = balance - #{money}
+        where ID=#{ID} ;
+    </update>
+
+    <update id="transferMoney" >
+#         update t_user
+#         set balance = balance - #{money}
+#         where ID=#{ID};
+    </update>
+    
+    <select id="queryUserById" resultType="User">
+        select * from t_user
+        where ID=#{userId} ;
+    </select>
+
+    <update id="updatePassWord" parameterType="User">
+        update t_user
+        set passWord = #{passWord}
+        where ID=#{ID} ;
+    </update>
+    
+    <select id="loginCheck" parameterType="User">
+        select ID,passWord from t_user
+        where ID=#{ID} and passWord=#{passWord} ;
+    </select>
+
+</mapper>
